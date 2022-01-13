@@ -2,10 +2,13 @@
     background-color: $red;
     color: #fff;
     text-align: center;
-    padding: 2.4em 2em;
+    padding: 2em 1.6em;
+    height: 100%;
     display: inline-block;
     text-transform: uppercase;
+    width: 100%;
     .name {
+        width: 100%;
         margin: 0;
         font-size: 64px;
         letter-spacing: .1rem;
