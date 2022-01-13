@@ -1,0 +1,16 @@
+.logo {
+    background-color: $red;
+    color: #fff;
+    text-align: center;
+    padding: 2.4em 2em;
+    display: inline-block;
+    text-transform: uppercase;
+    .name {
+        margin: 0;
+        font-size: 64px;
+        letter-spacing: .1rem;
+    }
+    .sublogo {
+        letter-spacing: -.1rem;
+    }
+}
