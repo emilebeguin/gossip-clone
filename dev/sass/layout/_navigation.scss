@@ -1,0 +1,32 @@
+.main-nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr) 3fr;
+    border-top: 1px solid $grey;
+    border-bottom: 1px solid $grey;
+    a {
+        display: block;
+        text-align: center;
+        padding: 1em;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $black;
+        font-weight: bold;
+        font-size: 120%;
+    }
+    :last-child {
+        text-align: right;
+        &:after {
+            content: "\2605";
+            color: $red;
+            margin-left: .5em;
+        }
+        &:hover {
+            color: $red;
+        }
+    }
+    :not(:last-child):hover {
+        background-color: $black;
+        color: $white;
+    }
+}

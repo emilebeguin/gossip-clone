@@ -1,7 +1,20 @@
 body {
-    background: #fff; 
+    background: #999; 
 }
 
-p {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.wrapper {
+    background-color: #fff;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.buy-now {
+    background-image: url(../../img/rec1.png);
+    background-position: center top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.ad {
+    width: 100%;
 }
