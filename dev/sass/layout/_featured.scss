@@ -18,5 +18,8 @@
             grid-area: fourth;
             grid-template-columns: calc(50% - 1em) 50%;
         }
+        .title-wrapper {
+            border: 1px solid $grey;
+        }
     }
 }
