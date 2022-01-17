@@ -1,0 +1,75 @@
+.sliders {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $gap;
+    padding: $gap;
+    height: 950px;
+    .beauty, .entertainment, .modelling {
+        overflow: hidden;
+        height: 100%;
+        .photo-swiper {
+            width: 100%;
+            height: inherit;
+            position: relative;
+            .swiper-button-prev, .swiper-button-next {
+                color: $white;
+                opacity: 0;
+                @include transition-eclair;
+                position: absolute;
+            }
+            .swiper-pagination-bullet-active {
+                color: $white;
+            }
+            .swiper-slide {
+                border-radius: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: relative;
+                height: inherit;
+                .title-wrapper {
+                    position: absolute;
+                    z-index: 1;
+                    bottom: calc($gap * 4);
+                    text-align: center;
+                    padding: 0 $gap;
+                    a {
+                        color: $white;
+                        background-color: $red;
+                        margin: $gap auto;
+                    }
+                    h3 {
+                        color: $white;
+                        font-size: 220%;
+                    }
+                }
+                .img-wrapper {
+                    height: 100%;
+                    width: 100%;
+                    z-index: -1;
+                    position: relative;
+                    height: inherit;
+                    overflow: hidden;
+                    @include overlay-before (
+                        $z-index: 1,
+                        $bg: linear-gradient(to bottom, rgba(102, 102, 102, .1), rgba(33, 33, 33, 1)),
+                        $opacity: .6
+                        );
+                    img {
+                        position: absolute;
+                        left: 50%;
+                        transform: translate(-50%);
+                        display: block;
+                        object-fit: cover;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        &:hover {
+            .swiper-button-prev, .swiper-button-next {
+                opacity: 1;
+            }
+        }
+    }
+}

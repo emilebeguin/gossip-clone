@@ -13,6 +13,11 @@ body {
     background-position: center top;
     background-size: contain;
     background-repeat: no-repeat;
+    &.banner {
+        width: 100%;
+        aspect-ratio: 14 / 1;
+        margin: $gap;
+    }
 }
 
 .ad {
@@ -33,12 +38,8 @@ article {
         padding: 1.5em;
         background-color: $white;
         a {
-            text-transform: uppercase;
-            text-decoration: none;
             color: $red;
-            font-weight: bold;
-            font-size: 90%; //
-            line-height: 2.8em;
+            background-color: transparent;
         }
         h3 {
             letter-spacing: .03em;

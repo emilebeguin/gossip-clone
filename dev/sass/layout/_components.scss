@@ -17,3 +17,16 @@
         letter-spacing: -.1rem;
     }
 }
+
+.title-wrapper {
+    a {
+        text-transform: uppercase;
+        display: block;
+        text-decoration: none;
+        font-weight: bold;
+        width: fit-content;
+        padding: 0 1rem;
+        font-size: 90%;
+        line-height: 2.8em;
+    }
+}
