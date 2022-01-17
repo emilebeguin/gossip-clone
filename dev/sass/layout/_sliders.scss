@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     @include gap-spacing;
-    height: 950px;
+    height: 700px;
     .beauty, .entertainment, .modelling {
         overflow: hidden;
         height: 100%;
@@ -39,7 +39,8 @@
                     }
                     h3 {
                         color: $white;
-                        font-size: 220%;
+                        font-size: 130%;
+                        line-height: 1.4;
                     }
                 }
                 .img-wrapper {

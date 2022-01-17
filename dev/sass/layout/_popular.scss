@@ -1,15 +1,19 @@
 .popular {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 500px 500px 500px;
+    grid-template-columns: repeat(3, 1fr) 1.2fr;
+    grid-template-rows: 400px 400px 400px;
     @include gap-spacing;
-    &>article {
+    article {
         position: relative;
         .title-wrapper {
             position: absolute;
             z-index: 1;
             bottom: $gap;
             width: calc(100% - $gap);
+            padding-left: 0;
+            a {
+                padding-left: inherit;
+            }
         }
         .img-wrapper {
             height: 100%;
@@ -18,6 +22,34 @@
             img {
                 display: block;
                 object-fit: cover;
+            }
+        }
+    }
+    .slider-most-popular {
+        width: 100%;
+        height: 100%;
+        padding: $gap;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+        h2 {
+            margin-top: 0;
+        }
+        article {
+            .img-wrapper {
+                overflow: hidden;
+                img {
+                    height: unset;
+                    width: 100%;
+                }
+            }
+            .title-wrapper {
+                position: unset;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                width: 100%;
+                * {
+                    margin: 0 auto;
+                }
             }
         }
     }
@@ -32,8 +64,11 @@
             article {
                 display: flex;
                 flex-flow: row;
+                width: 100%;
+                padding-bottom: $gap;
                 .img-wrapper {
-                    width: 30%;
+                    width: 40%;
+                    height: 140px;
                     img {
                         display: block;
                         object-fit: cover;
@@ -41,11 +76,13 @@
                 }
                 .title-wrapper {
                     width: 70%;
+                    height: 140px;
+                    position: unset;
                     border: 1px solid $grey;
                     border-left: 0;
                     padding: 1em .5em;
                     h3 {
-                        font-size: 90%;
+                        font-size: 80%;
                     }
                 }
             }

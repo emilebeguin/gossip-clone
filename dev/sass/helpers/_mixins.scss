@@ -16,6 +16,10 @@
     gap: $gap;
 }
 
+@mixin type ($size: size) {
+    font-size: calc($size * .1em + $size * 1px);
+}
+
 //cover video
 @mixin cover-video () {
     position: absolute;

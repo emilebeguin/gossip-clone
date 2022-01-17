@@ -1,9 +1,6 @@
 .browse, .contact-us {
     background-color: $black;
     color: $white;
-    h4 {
-        font-size: calc(10px + 1em);
-    }
     a {
         display: block;
         text-decoration: none;
@@ -23,7 +20,7 @@
             margin-bottom: 1em;
         }
         a {
-            font-size: calc(5px + .5em);
+            font-size: calc(4px + .35em);
             width: 80%;
         }
     }

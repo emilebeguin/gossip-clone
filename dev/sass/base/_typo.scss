@@ -8,13 +8,13 @@ h1, h2, h3, h4, h5, nav {
     text-transform: uppercase;
 }
 
-h3 {
-    font-size: calc(19px + .4vw);
-}
-
 .over-title {
     text-transform: uppercase;
     text-decoration: none;
     color: #fff;
     padding: .5em;
+}
+
+h4 {
+    @include type($size: 8)
 }
