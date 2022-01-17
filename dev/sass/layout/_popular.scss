@@ -2,8 +2,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 500px 500px 500px;
-    gap: $gap;
-    padding: $gap;
+    @include gap-spacing;
     &>article {
         position: relative;
         .title-wrapper {
@@ -52,39 +51,6 @@
             }
             .stay-in-touch {
                 background-color: $tile;
-                padding: $gap;
-                *:not(:last-child) {
-                    margin-bottom: 1em;
-                }
-                p {
-                    font-size: 75%;
-                }
-                form {
-                    display: flex;
-                    flex-direction: column;
-                    input {
-                        width: 100%;
-                        font: inherit;
-                        padding: .8em;
-                        border: 0;
-                        outline: none;
-                        &[type=text] {
-                            background-color: $white;
-                            color: $grey;
-                        }
-                        &[type=submit] {
-                            background-color: $red;
-                            color: $white;
-                            margin-bottom: 0;
-                            text-transform: uppercase;
-                            cursor: pointer;
-                            @include transition-eclair;
-                            &:hover{
-                                background-color: $black;
-                            }
-                        }
-                    }
-                }
             }
         }
     }

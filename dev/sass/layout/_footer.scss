@@ -1,0 +1,63 @@
+.browse, .contact-us {
+    background-color: $black;
+    color: $white;
+    h4 {
+        font-size: calc(10px + 1em);
+    }
+    a {
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $white;
+        &:hover {
+            color: $red;
+        }
+    }
+}
+.browse {
+    .categories {
+        @include gap-spacing;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        .article-cat>* {
+            margin-bottom: 1em;
+        }
+        a {
+            font-size: calc(5px + .5em);
+            width: 80%;
+        }
+    }
+}
+.contact-us {
+    @include gap-spacing;
+    padding-top: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+        width: 100%;
+    }
+    .social-links {
+        display: flex;
+        gap: 1rem;
+        a {
+            @include carre($size: calc(2 * $gap));
+            background-color: $tile;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i {
+                font-size: $gap;
+            }
+            &:hover {
+                background-color: $red;
+                color: inherit;
+            }
+        }
+    }
+    .general-links {
+        display: flex;
+        @include gap-spacing;
+    }
+}

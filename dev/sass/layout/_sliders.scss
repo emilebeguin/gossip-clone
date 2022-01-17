@@ -1,8 +1,7 @@
 .sliders {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: $gap;
-    padding: $gap;
+    @include gap-spacing;
     height: 950px;
     .beauty, .entertainment, .modelling {
         overflow: hidden;

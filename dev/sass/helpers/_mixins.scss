@@ -11,6 +11,11 @@
     align-items: $align;
 }
 
+@mixin gap-spacing {
+    padding: $gap;
+    gap: $gap;
+}
+
 //cover video
 @mixin cover-video () {
     position: absolute;

@@ -2,7 +2,7 @@
     background-color: $red;
     color: #fff;
     text-align: center;
-    padding: 2em 1.6em;
+    padding: $gap;
     height: 100%;
     display: inline-block;
     text-transform: uppercase;
@@ -28,5 +28,41 @@
         padding: 0 1rem;
         font-size: 90%;
         line-height: 2.8em;
+    }
+}
+
+.stay-in-touch {
+    @include gap-spacing;
+    *:not(:last-child) {
+        margin-bottom: 1em;
+    }
+    p {
+        font-size: 75%;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        input {
+            width: 100%;
+            font: inherit;
+            padding: .8em;
+            border: 0;
+            outline: none;
+            &[type=text] {
+                background-color: $white;
+                color: $grey;
+            }
+            &[type=submit] {
+                background-color: $red;
+                color: $white;
+                margin-bottom: 0;
+                text-transform: uppercase;
+                cursor: pointer;
+                @include transition-eclair;
+                &:hover{
+                    background-color: $black;
+                }
+            }
+        }
     }
 }

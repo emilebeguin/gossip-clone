@@ -1,0 +1,48 @@
+.latest {
+    h2 {
+        margin: $gap $gap 0;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, auto);
+        gap: $gap;
+        padding: $gap;
+        justify-content: start;
+        article {
+            display: grid;
+            grid-template-rows: 240px 30%;
+            border: 1px solid $grey;
+            border-top: 0;
+        }
+    }
+    .pagination {
+        display: flex;
+        @include gap-spacing;
+        line-height: calc($gap * 1.35);
+        justify-content: start;
+        a {
+            display: block;
+            @include carre ($size: calc($gap * 1.35));
+            border: 1px solid $grey;
+            text-decoration: none;
+            text-align: center;
+            &.active {
+                background-color: $red;
+                border: 0;
+                color: $white;
+            }
+            &:nth-of-type(4) {
+                border: 0;
+            }
+            &:hover:not(:nth-of-type(4)) {
+                background-color: $black;
+                color: $white;
+                border-color: $black;
+            }
+        }
+        p {
+            margin-left: auto;
+        }
+    }
+}
